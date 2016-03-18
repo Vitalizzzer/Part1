@@ -18,7 +18,7 @@ namespace Divider
             else
             {
                 Console.WriteLine("{0} is not a divider of {1}", b, a);
-                Console.WriteLine("Press your favourite key to close this window");
+                
                 Console.ReadKey();
             }
 
