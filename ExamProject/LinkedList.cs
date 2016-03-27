@@ -14,31 +14,30 @@ namespace ExamProject
 
         public void AddFirst(T value)  // add node to the first place;
         {
+            size++;
             if (node == null)
             {
-                node = new Node<T>(null, value, null);
-                size++;
+                node = new Node<T>(null, value, null);              
             }
             else
             {
-                Node<T> temp = new Node<T>(null, value, node);
-                node.prevNode = temp;
-                size++;
+                Node<T> temp = new Node<T>(null, value, First());
+                First().prevNode = temp;                
             }
         }
         
         public void AddLast(T value)  // add node to the last place;
         {
+            size++;
             if (node == null)
             {
                 node = new Node<T>(null, value, null);
-                size++;
             }
             else
             {
-                Node<T> temp = new Node<T>(node, value, null);
-                node.nextNode = temp;
-                size++;
+                Node<T> temp = new Node<T>(Last(), value, null);
+                Last().nextNode = temp;
+                                    
             }
         }
 
@@ -73,13 +72,13 @@ namespace ExamProject
                             break;
                         }                        
                     }
-                    else if (node.prevNode == null)
+                    else if (node.nextNode == null)
                     {
                         break;
                     }
                     else
                     {
-                        node = node.prevNode;
+                        node = node.nextNode;
                     }
                 }
             }            
@@ -212,37 +211,20 @@ namespace ExamProject
         public void Print() // print list length and each node value;
         {
             Console.WriteLine("Total number of values in list: {0}", Length());
-                       
+                      
             if (First() == null)
             {
-                Console.WriteLine("The list is empty!");
                 return;
-            }
-            node = First();
-            int element = 1;
-
-            while(node != null)
+            }            
+            else
             {
-                Console.WriteLine("Element " + element.ToString() + ": " + node.nodeData.ToString());
-                element++;
-                node = node.nextNode;
-            }
-
-            //else
-            //{
-            //    for (int i = 1; i <= Length(); i++)
-            //    {
-            //        if (node != null)
-            //        {
-            //            Console.Write("Value in list: {0}\n", node.nodeData);
-            //            node = node.nextNode;
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("The list is empty!");
-            //        }
-            //    }
-            //}         
+                Node<T> temp = node;  // define temporal variable to avoid changes in nodes;
+                for (int i = 1; i <= Length(); i++)
+                {
+                   Console.Write("Value " + i + " in list: {0}\n", temp.nodeData);
+                   temp = temp.nextNode;             
+                }
+            }         
         }
     }
 }

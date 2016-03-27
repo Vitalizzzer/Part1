@@ -10,21 +10,15 @@ namespace ExamProject
     {
         static void Main(string[] args)
         {
-            LinkedList<int> list = new LinkedList<int>();
-            list.AddFirst(1);
-            list.AddLast(2);
-            //list.Remove(1);
-            list.AddLast(3);
-            //list.Remove(2);
-            list.AddLast(4);
-            list.AddLast(5);
-            list.AddFirst(6);
-            list.AddFirst(7);
-            list.AddFirst(8);
-            list.AddFirst(9);
-            list.AddFirst(10);            
-            //list.Remove(6);
-            //list.Remove(8);
+            LinkedList<string> list = new LinkedList<string>();
+            list.AddFirst("first_one");
+            list.AddLast("last_two");            
+            list.AddLast("last_three");           
+            list.AddLast("last_four");
+            list.AddFirst("zero");
+            list.AddLast("last_five");           
+            list.Print();          
+            list.Remove("last_five");                 
             list.Print();            
             Console.ReadKey();
         }
