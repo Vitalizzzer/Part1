@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ExamProject
 {
     
-    class LinkedList<T> : ILinkedList<T>
+   public class LinkedList<T> : ILinkedList<T>
     {
         Node<T> node = null;
         int size = 0;
