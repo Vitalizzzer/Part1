@@ -1,0 +1,5 @@
+c:\users\vitalii\documents\visual studio 2013\Projects\Name_FamilyName\Name_FamilyName\bin\Debug\Name_FamilyName.exe.config
+c:\users\vitalii\documents\visual studio 2013\Projects\Name_FamilyName\Name_FamilyName\bin\Debug\Name_FamilyName.exe
+c:\users\vitalii\documents\visual studio 2013\Projects\Name_FamilyName\Name_FamilyName\bin\Debug\Name_FamilyName.pdb
+c:\users\vitalii\documents\visual studio 2013\Projects\Name_FamilyName\Name_FamilyName\obj\Debug\Name_FamilyName.exe
+c:\users\vitalii\documents\visual studio 2013\Projects\Name_FamilyName\Name_FamilyName\obj\Debug\Name_FamilyName.pdb
