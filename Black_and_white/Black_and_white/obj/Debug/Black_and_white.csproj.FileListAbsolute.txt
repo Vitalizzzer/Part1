@@ -3,7 +3,6 @@ c:\users\vitalii\documents\visual studio 2013\Projects\Black_and_white\Black_and
 c:\users\vitalii\documents\visual studio 2013\Projects\Black_and_white\Black_and_white\bin\Debug\Black_and_white.pdb
 c:\users\vitalii\documents\visual studio 2013\Projects\Black_and_white\Black_and_white\obj\Debug\Black_and_white.exe
 c:\users\vitalii\documents\visual studio 2013\Projects\Black_and_white\Black_and_white\obj\Debug\Black_and_white.pdb
-c:\users\vitalii\documents\visual studio 2013\Projects\Black_and_white\Black_and_white\obj\Debug\Black_and_white.csprojResolveAssemblyReference.cache
 C:\Users\vitaliir.NICE_SYSTEMS\Documents\Visual Studio 2013\Projects\Black_and_white\Black_and_white\bin\Debug\Black_and_white.exe.config
 C:\Users\vitaliir.NICE_SYSTEMS\Documents\Visual Studio 2013\Projects\Black_and_white\Black_and_white\obj\Debug\Black_and_white.exe
 C:\Users\vitaliir.NICE_SYSTEMS\Documents\Visual Studio 2013\Projects\Black_and_white\Black_and_white\obj\Debug\Black_and_white.pdb
@@ -15,3 +14,4 @@ C:\Users\vitaliir.NICE_SYSTEMS\Documents\Visual Studio 2012\Projects\Black_and_w
 C:\Users\vitaliir.NICE_SYSTEMS\Documents\Visual Studio 2012\Projects\Black_and_white\Black_and_white\obj\Debug\Black_and_white.pdb
 C:\Users\vitaliir.NICE_SYSTEMS\Documents\Visual Studio 2012\Projects\Black_and_white\Black_and_white\bin\Debug\Black_and_white.exe
 C:\Users\vitaliir.NICE_SYSTEMS\Documents\Visual Studio 2012\Projects\Black_and_white\Black_and_white\bin\Debug\Black_and_white.pdb
+C:\Users\Vitalii\Documents\Visual Studio 2013\Projects\Black_and_white\Black_and_white\obj\Debug\Black_and_white.csprojResolveAssemblyReference.cache

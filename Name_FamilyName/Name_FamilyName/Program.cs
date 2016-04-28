@@ -5,75 +5,92 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace ConsoleApplication13
+namespace Black_and_white
 {
     class Program
     {
         static void Main(string[] args)
         {
-            HashSet<string> names = new HashSet<string>();
-            HashSet<string> familyNames = new HashSet<string>();
-            List<string> fullNames = new List<string>();
-            Dictionary<string, int> dictionary = new Dictionary<string, int>();
 
-            using (StreamReader readerNames = new StreamReader(@"C:\TEST\names.txt"))
+            HashSet<string> input = new HashSet<string>();
+            HashSet<string> blacklist = new HashSet<string>();
+            HashSet<string> whitelist = new HashSet<string>();
+
+            using (StreamReader readInput = new StreamReader(@"C:\TEST\Input.txt"))
             {
-                string lineNames;
-                while ((lineNames = readerNames.ReadLine()) != null)
+                string lineInput;
+                while ((lineInput = readInput.ReadLine()) != null)
                 {
-                    names.Add(lineNames);
+                    input.Add(lineInput);
                 }
             }
 
-            using (StreamReader readerFamilyNames = new StreamReader(@"C:\TEST\family_names.txt"))
+
+            using (StreamReader readBlacklist = new StreamReader(@"C:\TEST\Blacklist.txt"))
             {
-                string lineFamilyNames;
-                while ((lineFamilyNames = readerFamilyNames.ReadLine()) != null)
+                string lineBlacklist;
+                while ((lineBlacklist = readBlacklist.ReadLine()) != null)
                 {
-                    familyNames.Add(lineFamilyNames);
+                    blacklist.Add(lineBlacklist);
                 }
             }
-            foreach (string i in names)
+
+
+            using (StreamReader readWhitelist = new StreamReader(@"C:\TEST\Whitelist.txt"))
             {
-                Console.WriteLine(i);
-            }
-
-            Console.WriteLine();
-
-            foreach (string i in familyNames)
-            {
-                Console.WriteLine(i);
-            }
-
-            Console.WriteLine();
-
-            for (int i = 0; i <= 25; i++)
-            {
-                System.Threading.Thread.Sleep(5);
-                Random randomNames = new Random();
-                string name = names.ElementAt(randomNames.Next(names.Count));
-
-                System.Threading.Thread.Sleep(1);
-                Random randomFamilyNames = new Random();
-                string familyName = familyNames.ElementAt(randomFamilyNames.Next(familyNames.Count));
-                System.Threading.Thread.Sleep(8);
-
-                fullNames.Add(name + " " + familyName);
-            }
-            int count = dictionary.Count;
-            foreach (string fullname in fullNames)
-            {
-                if (dictionary.ContainsKey(fullname))
+                string lineWhitelist;
+                while ((lineWhitelist = readWhitelist.ReadLine()) != null)
                 {
-                    count++;
-                }
-                else
-                {
-                    dictionary.Add(fullname, count);
-                    Console.WriteLine("Key: {0}, repeat {1} times", fullname, count);
+                    whitelist.Add(lineWhitelist);
                 }
             }
-            Console.ReadKey();
+
+
+            foreach (string inputItem in input)
+            {
+                foreach (string blackItem in blacklist)
+                {
+                    if (inputItem != blackItem)
+                    {
+                        using (StreamWriter output = new StreamWriter(@"C:\TEST\Output_Blacklist.txt", true))
+                        {
+                            output.WriteLine(inputItem);
+                        }
+                    }
+                }
+            }
+
+            //foreach (string inputItem in input)
+            //{
+            //    foreach (string whiteItem in whitelist)
+            //    {
+            //        if (inputItem.Equals(whiteItem))
+            //        {
+            //            using (StreamWriter output = new StreamWriter(@"C:\TEST\Output_Whitelist.txt", true))
+            //            {
+            //                output.WriteLine(inputItem);
+            //            }
+            //        }
+            //    }
+            //}
+
+            //foreach (string inputItem in input)
+            //{
+            //    foreach (string blackItem in blacklist)
+            //    {
+            //        foreach (string whiteItem in whitelist)
+            //        {
+            //            if (!inputItem.Equals(blackItem) && inputItem.Equals(whiteItem))
+            //            {
+            //                using (StreamWriter output = new StreamWriter(@"C:\TEST\Output_Black_White.txt", true))
+            //                {
+            //                    output.WriteLine(inputItem);
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
+
         }
     }
 }
